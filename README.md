@@ -43,6 +43,8 @@ spec:
   backoffLimit: 4
 ```
 
+If you are using the _podSecurityPolicies_ you can use manifests and [_kustomize_](https://kustomize.io/) in `./manifests`.
+
 ## Under The hood
 
 `runInHost` is a simple wrapper that call nsenter to execute command on host.
