@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for i in {1..65534}
+do
+    echo "build for UID: $i"
+    docker build --build-arg NSENTER_UID="$DOCKER_TAG" -f "$DOCKERFILE_PATH" -t "$DOCKER_REPO:$i" .
+done

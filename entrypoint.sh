@@ -1,2 +1,2 @@
 #!/bin/sh
-exec nsenter -m/proc/1/ns/mnt -- "$@"
+exec nsenter --mount=/proc/1/ns/mnt --setuid "$NSENTER_UID" -- "$@"
